@@ -53,10 +53,10 @@ const saveCustomer = async () => {
         <div class="page-body" style="margin-top: 8rem;">
           <div class="grid grid-cols-6 gap-card-gap">
             <div class="col-span-6 md:col-span-12" >
-              <div class="card tabs" style="background-color: rgb(107, 177, 252);">
+              <div class="card tabs" style="background-color: #e6e9f9;">
                 <div class="card-header pb-2 header-bottom-border">
                   <div class="flex flex-col">
-                    <h2 class="text-lg font-bold text-dark">AJOUTER PARTIENT</h2>
+                    <h2 class="text-lg font-bold text-dark">AJOUTER PATIENT</h2>
                  
                   </div>
                 </div>
@@ -64,38 +64,38 @@ const saveCustomer = async () => {
                   <div class="tabs-content">
                     <div class="tab-pan active show " data-tabContent="1">
                       <div class="checkout-detail">    
-                        <form class="theme-form flex flex-col gap-4 !m-0" style="background-color: rgb(107, 177, 252);">
+                        <form class="theme-form flex flex-col gap-4 !m-0" style="background-color: #dde2fe;">
                         
                             <div class="grid grid-cols-12 gap-5 sm:gap-3 sm:-mt-1">
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
                                 <label for="sku" style="color: black; font-weight: 700;">Nom</label>
-                                <input type="text" v-model="form.nom" id="sku"  >
+                                <input type="text" v-model="form.nom" style="color: rgb(112, 107, 107); font-weight: 700;"  >
                                 </div>
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
                                 <label for="sku" style="color: black; font-weight: 700;">Prenom</label>
-                                <input type="email" id="sku" v-model="form.prenom"   >
+                                <input type="email" id="sku" v-model="form.prenom"  style="color: rgb(112, 107, 107); font-weight: 700;"  >
                                 </div>
                                 
                             </div>
                             <div class="grid grid-cols-12 gap-5 sm:gap-3 sm:-mt-1">
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
                                 <label for="sku" style="color: black; font-weight: 700;">Email</label>
-                                <input type="text" v-model="form.email"  id="sku" >
+                                <input type="text" v-model="form.email"  style="color: rgb(112, 107, 107); font-weight: 700;"  >
                                 </div>
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
                                 <label for="sku" style="color: black; font-weight: 700;">Contact</label>
-                                <input type="text" v-model="form.telephone"  id="sku" >
+                                <input type="text" v-model="form.telephone"  style="color: rgb(112, 107, 107); font-weight: 700;"  >
                                 </div>
                                 
                             </div>
                             <div class="grid grid-cols-12 gap-5 sm:gap-3 sm:-mt-1">
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
                                 <label for="sku" style="color: black; font-weight: 700;">Adresse</label>
-                                <input type="text" v-model="form.adresse"  id="sku" >
+                                <input type="text" v-model="form.adresse"  style="color: rgb(112, 107, 107); font-weight: 700;"  >
                                 </div>
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
                                 <label for="sku" style="color: black; font-weight: 700;">Date de Naissance</label>
-                                <input type="date" v-model="form.date"  id="sku">
+                                <input type="date" v-model="form.date"  style="color: rgb(112, 107, 107); font-weight: 700;" >
                                 </div>
                                 
                             </div>

@@ -37,7 +37,7 @@ const total = computed(() => {
     });
 
     // Mettre à jour form.total avec le total calculé
-    form.value.total = totalPrice.toFixed(2); // Stocker le total dans form.total
+    form.value.total = totalPrice; // Stocker le total dans form.total
 
     return form.value.total; // Retourner le total pour l'affichage
 });
@@ -79,6 +79,11 @@ const saveFacture = async () => {
                       title: "Facture enregistrer avec success",
                   });
                  router.push("/factures")
+              }else{
+                toast.fire({
+                      icon: "error",
+                      title: "Remplissez correctement tout les champs",
+                  });
               }
 
             })
@@ -127,10 +132,10 @@ onMounted(async () => {
         <div class="page-body" style="margin-top: 6rem">
             <div class="grid grid-cols-6 gap-card-gap">
                 <div class="col-span-6 md:col-span-12">
-                    <div class="card tabs" style="background-color: rgb(163, 23, 165);">
+                    <div class="card tabs" style="background-color: #d3d9fc;">
                         <div class="card-header pb-2 header-bottom-border">
                             <div class="flex flex-col">
-                                <h2 class="text-lg font-bold text-warning">
+                                <h2 class="text-lg font-bold text-dark">
                                     AJOUTER FACTURE
                                 </h2>
 
@@ -145,17 +150,17 @@ onMounted(async () => {
                                     data-tabContent="1"
                                 >
                                     <div class="checkout-detail">
-                                        <form style="background-color: rgb(163, 23, 165);"
+                                        <form style="background-color: #d3d9fc;"
                                             class="theme-form flex flex-col gap-4 !m-0"
                                         >
                                             
                                             <div>
-                                                <label for="number" style="color: rgb(247, 202, 91); font-weight: 900;"
+                                                <label for="number" style="color: black; font-weight: 700;"
                                                         >Client</label
                                                     >
                                                     <select
                                                         v-model="form.client_id"
-                                                        class="form-select block w-full px-3 text-xs font-normal text-content3 bg-white bg-clip-padding bg-no-repeat border border-border-light rounded-5 transition ease-in-out m-0 min-w-[150px] py-[9px] dark:border-border-dark dark:bg-sidebar-dark2"
+                                                        class="form-select block w-full px-3 text-xs font-normal text-dark bg-white bg-clip-padding bg-no-repeat border border-border-light rounded-5 transition ease-in-out m-0 min-w-[150px] py-[9px] dark:border-border-dark dark:bg-sidebar-dark2"
                                                         id="status"
                                                         aria-label="Default select example"
                                                     >
@@ -170,7 +175,7 @@ onMounted(async () => {
                                             </div>
                                             <button
                                                 type="button"
-                                                class="btn btn-warning py-3 text-white"
+                                                class="btn btn-primary py-3 text-white"
                                                 @click="addItem()"
                                             >
                                                 +
@@ -181,7 +186,7 @@ onMounted(async () => {
                                                 :key="index"
                                             >
                                                 <div>
-                                                    <label for="number" style="color: rgb(247, 202, 91); font-weight: 900;"
+                                                    <label for="number" style="color: black; font-weight: 700;"
                                                         >Numero Dent</label
                                                     >
                                                     <select
@@ -192,13 +197,31 @@ onMounted(async () => {
                                                         id="status"
                                                         aria-label="Default select example"
                                                     >
+                                                    <option value="11">
+                                                            11
+                                                        </option>
+                                                        <option value="12">
+                                                            12
+                                                        </option>
+                                                        <option value="13">
+                                                            13
+                                                        </option>
+                                                        <option value="14">
+                                                            14
+                                                        </option>
+                                                        <option value="15">
+                                                            15
+                                                        </option>
+                                                        <option value="16">
+                                                            16
+                                                        </option>
+                                                        <option value="17">
+                                                            17
+                                                        </option>
                                                         <option value="18">
                                                             18
                                                         </option>
-                                                        
-                                                        <option value="20">
-                                                            20
-                                                        </option>
+                                                       
                                                         <option value="21">
                                                             21
                                                         </option>
@@ -223,12 +246,7 @@ onMounted(async () => {
                                                         <option value="28">
                                                             28
                                                         </option>
-                                                        <option value="29">
-                                                            29
-                                                        </option>
-                                                        <option value="30">
-                                                            30
-                                                        </option>
+                                                        
                                                         <option value="31">
                                                             31
                                                         </option>
@@ -253,12 +271,7 @@ onMounted(async () => {
                                                         <option value="38">
                                                             38
                                                         </option>
-                                                        <option value="39">
-                                                            39
-                                                        </option>
-                                                        <option value="40">
-                                                            40
-                                                        </option>
+                                                        
                                                         <option value="41">
                                                             41
                                                         </option>
@@ -283,7 +296,6 @@ onMounted(async () => {
                                                         <option value="48">
                                                             48
                                                         </option>
-                                                        
                                                     </select>
                                                 </div>
 
@@ -293,7 +305,7 @@ onMounted(async () => {
                                                     <div
                                                         class="col-span-6 2md:col-span-6 sm:col-span-12"
                                                     >
-                                                        <label for="number" style="color: rgb(247, 202, 91); font-weight: 900;"
+                                                        <label for="number" style="color: black; font-weight: 700;"
                                                             >Acte</label
                                                         >
                                                         <select
@@ -325,7 +337,7 @@ onMounted(async () => {
                                                     <div
                                                         class="col-span-6 2md:col-span-6 sm:col-span-12"
                                                     >
-                                                        <label for="number" style="color: rgb(247, 202, 91); font-weight: 900;"
+                                                        <label for="number" style="color: black; font-weight: 700;"
                                                             >Sous_Acte</label
                                                         >
                                                         <select
@@ -353,54 +365,26 @@ onMounted(async () => {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="col-span-1 md:col-span-6 sm:col-span-12 mt-2 min-w-[130px]"
-                                                >
+                                               
                                                     <button
                                                         type="button"
                                                         @click="
-                                                            removeItem(index)
+                                                            removeItem(index) 
                                                         "
+                                                         class="btn btn-danger p-2 text-white font-bold"
                                                     >
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            width="40"
-                                                            height="40"
-                                                            viewBox="0 0 24 24"
-                                                            fill="none"
-                                                            stroke="red"
-                                                            stroke-width="2"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            class="feather feather-x-octagon"
-                                                        >
-                                                            <polygon
-                                                                points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"
-                                                            ></polygon>
-                                                            <line
-                                                                x1="15"
-                                                                y1="9"
-                                                                x2="9"
-                                                                y2="15"
-                                                            ></line>
-                                                            <line
-                                                                x1="9"
-                                                                y1="9"
-                                                                x2="15"
-                                                                y2="15"
-                                                            ></line>
-                                                        </svg>
+                                                        -
                                                     </button>
-                                                </div>
+                                               
                                             </div>
                                             <div class="mt-4">
-        <label style="color: rgb(247, 202, 91); font-weight: 900;">Total : {{ total }} F.CFA</label>
+        <label style="color: black; font-weight: 900;">Total : {{ total }} F.CFA</label>
     </div>
                                             <div
                                                 class="flex justify-end items-center"
                                             >
                                                 <button
-                                                    class="btn btn-white bg-warning text-white text-xs font-semibold py-2 !m-0 !w-fit"
+                                                    class="btn btn-white bg-dark text-white text-xs font-semibold py-2 !m-0 !w-fit"
                                                     type="button"
                                                     @click="saveFacture()"
                                                 >

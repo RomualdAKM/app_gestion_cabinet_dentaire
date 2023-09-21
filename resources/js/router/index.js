@@ -23,85 +23,139 @@ import notFound from '../components/notFound.vue'
 const routes = [
     {
         path: '/',
-        component: index
+        name: 'adminHome',
+        component: index,
+        meta: {
+            requiresAuth: true
+        }
     },
 
     //client
     {
         path: '/clients',
-        component: clients
+        component: clients,
+        meta: {
+            requiresAuth: true
+        }
     },
     {
         path: '/ajouter_client',
-        component: ajoutclient
+        component: ajoutclient,
+         meta: {
+            requiresAuth: true
+        }
     },
     {
         name: 'EditCustomer',
         path: '/editer-client/:customerId',
-        component: editeclient
+        component: editeclient,
+         meta: {
+            requiresAuth: true
+        }
     },
 
     //acte
     {
         path: '/actes',
-        component: actes
+        component: actes,
+         meta: {
+            requiresAuth: true
+        }
     },
     {
         path: '/ajouter_acte',
-        component: ajoutActe
+        component: ajoutActe,
+         meta: {
+            requiresAuth: true
+        }
     },
     {
         name: 'EditActe',
         path: '/editer-acte/:acteId',
-        component: editeActe
+        component: editeActe,
+         meta: {
+            requiresAuth: true
+        }
     },
     //sous Acte
     {
         path: '/sous_actes',
-        component: sousActe
+        component: sousActe,
+         meta: {
+            requiresAuth: true
+        }
     },
     {
         path: '/ajouter_sous_acte',
-        component: ajoutSousActe
+        component: ajoutSousActe,
+         meta: {
+            requiresAuth: true
+        }
     },
     {
         name: 'EditSousActe',
         path: '/editer-sous_acte/:sousacteId',
-        component: editeSousActe
+        component: editeSousActe,
+         meta: {
+            requiresAuth: true
+        }
     },
 
     //facture
     {
         path: '/ajouter_facture',
-        component: ajoutFacture
+        component: ajoutFacture,
+         meta: {
+            requiresAuth: true
+        }
     },
     {
         path: '/factures',
-        component: factures
+        component: factures,
+         meta: {
+            requiresAuth: true
+        }
     },
 
     //devi
     {
         path: '/ajouter_devi',
-        component: ajoutDevi
+        component: ajoutDevi,
+         meta: {
+            requiresAuth: true
+        }
     },
     {
         path: '/devis',
-        component: devis
+        component: devis,
+         meta: {
+            requiresAuth: true
+        }
     },
     //auth
     {
         path: '/register',
-        component: register
+        component: register,
+         meta: {
+            requiresAuth: false
+        }
     },
     {
         path: '/login',
-        component: login
+        component: login,
+        name: 'Login',
+        meta: {
+            requiresAuth: false,
+            
+        }
     },
 
     {
         path: '/:pathMatch(.*)*',
         component: notFound,
+         meta: {
+            requiresAuth: false
+        }
     }
 
 ]
@@ -110,6 +164,15 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
 
+})
+router.beforeEach((to,from) =>{
+    if(to.meta.requiresAuth && !localStorage.getItem('token')){
+        return { name: 'Login' }
+    }
+
+    if(to.meta.requiresAuth == false && localStorage.getItem('token')){
+        return { name: 'adminHome' }
+    }
 })
 
 export default router

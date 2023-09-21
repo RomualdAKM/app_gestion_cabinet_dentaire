@@ -1,8 +1,8 @@
 <template>
   <!-- Sidebar Start -->
-  <div class="page-sidebar sidebar-dark unique-sidebar" style="background-color: rgb(116, 181, 252);">
+  <div class="page-sidebar sidebar-dark unique-sidebar" style="background-color: #E1E4F4;">
     <aside class="sidebar">
-      <div class="logo-wrapper"><a href="index.html"> <img class="w-full full-sidebar" src="../../assets/images/logo/logo.png" alt="logo"></a>
+      <div class="logo-wrapper"><a href="index.html"> </a>
         <button class="sidebar-btn">
           <svg class="w-6 h-6">
             <use href="https://admin.pixelstrap.com/govo/assets/svg/sprite.svg#Category"> </use>

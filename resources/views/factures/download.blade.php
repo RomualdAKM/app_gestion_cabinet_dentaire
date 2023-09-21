@@ -1,207 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>Example 1</title>
-    {{-- <link rel="stylesheet" href="style.css" media="all" /> --}}
-  </head>
-  <style>
-    .clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    <title>Facture {{$facture->id}}</title>
+    <style>
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-a {
-  color: #5D6975;
-  text-decoration: underline;
-}
+        body {
+            position: relative;
+            width: 18cm;
+            margin: 0 auto;
+            color: #000;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
 
-body {
-  position: relative;
-  width: 19cm;
-  height: 29.7cm;
-  margin: 0 auto;
-  color: #001028;
-  background: #FFFFFF;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-family: Arial;
-}
+        header {
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
 
-header {
-  padding: 10px 0;
-  margin-bottom: 30px;
-}
+        h1 {
+            border-bottom: 2px solid #007acc;
+            color: #007acc;
+            font-size: 2em;
+            text-align: center;
+            margin: 0;
+            padding-bottom: 10px;
+        }
 
-#logo {
-  text-align: center;
-  margin-bottom: 10px;
-}
+        #company {
+            text-align: right;
+            float: right;
+        }
 
-#logo img {
-  width: 90px;
-}
+        #project {
+            float: left;
+        }
 
-h1 {
-  border-top: 1px solid  #5D6975;
-  border-bottom: 1px solid  #5D6975;
-  color: #5D6975;
-  font-size: 2.4em;
-  line-height: 1.4em;
-  font-weight: normal;
-  text-align: center;
-  margin: 0 0 20px 0;
-  background: url(dimension.png);
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
 
-#project {
-  float: left;
-}
+        table tr:nth-child(2n-1) td {
+            background: #f2f2f2;
+        }
 
-#project span {
-  color: #5D6975;
-  text-align: right;
-  width: 52px;
-  margin-right: 10px;
-  display: inline-block;
-  font-size: 0.8em;
-}
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+        }
 
-#company {
-  float: right;
-  text-align: right;
-}
+        table th {
+            background: #007acc;
+            color: #fff;
+            font-weight: bold;
+        }
 
-#project div,
-#company div {
-  white-space: nowrap;
-}
+        table td {
+            border-bottom: 1px solid #007acc;
+        }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin-bottom: 20px;
-}
+        table .service, table .desc {
+            text-align: left;
+        }
 
-table tr:nth-child(2n-1) td {
-  background: #F5F5F5;
-}
+        table td.unit, table td.qty, table td.total {
+            font-size: 1.2em;
+        }
 
-table th,
-table td {
-  text-align: center;
-}
+        table td.grand {
+            border-top: 2px solid #007acc;
+        }
 
-table th {
-  padding: 5px 20px;
-  color: #5D6975;
-  border-bottom: 1px solid #C1CED9;
-  white-space: nowrap;
-  font-weight: normal;
-}
+        #notices .notice {
+            color: #007acc;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
 
-table .service,
-table .desc {
-  text-align: left;
-}
-
-table td {
-  padding: 20px;
-  text-align: right;
-}
-
-table td.service,
-table td.desc {
-  vertical-align: top;
-}
-
-table td.unit,
-table td.qty,
-table td.total {
-  font-size: 1.2em;
-}
-
-table td.grand {
-  border-top: 1px solid #5D6975;;
-}
-
-#notices .notice {
-  color: #5D6975;
-  font-size: 1.2em;
-}
-
-footer {
-  color: #5D6975;
-  width: 100%;
-  height: 30px;
-  position: absolute;
-  bottom: 0;
-  border-top: 1px solid #C1CED9;
-  padding: 8px 0;
-  text-align: center;
-}
-  </style>
-  <body>
-    <header class="clearfix">
-      {{-- <div id="logo">
-        <img src="logo.png">
-      </div> --}}
-      <h1>Facture {{$facture->id}}</h1>
-      <div id="company" class="clearfix">
-        <div>Company Name</div>
-        <div>455 Foggy Heights,<br /> AZ 85004, US</div>
-        <div>(602) 519-0450</div>
-        <div><a href="mailto:company@example.com">company@example.com</a></div>
-      </div>
-      <div id="project">
-
+        footer {
+            color: #007acc;
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid #007acc;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<header class="clearfix">
+    <h1>Facture - {{$facture->id}}</h1>
+    <div id="company" class="clearfix">
+        <div>Dr Fatima ASSANI AGBANRIN</div>
+        <div>Cabinet dentaire ABOLORÊ  ,<br /> cotonou, Haie Vive</div>
+        <div>(229) 20 22 03 42</div>
+        <div>(229) 45 72 72 72</div>
+        <div>cabinetdentaire.abolore@outlook.com</a></div>
+        <div>IFU 3202256943894</a></div>
+    </div>
+    <div id="project">
         <div><span>NOM CLIENT</span> {{ $client->nom }}  </div>
         <div><span>PRENOM CLIENT</span>  {{ $client->prenom}}</div>
-        <div><span>ADDRESS</span> {{ $client->adresse }}</div>
-        {{-- <div><span>EMAIL</span> {{ $client->email }}</div> --}}
-        {{-- <div><span>TEL</span> {{ $client->telephone }}</div> --}}
-
-      </div>
-    </header>
-    <main>
-      <table>
+        <div><span>ADRESSE</span> {{ $client->adresse }}</div>
+    </div>
+</header>
+<main>
+    <table>
         <thead>
-          <tr>
+        <tr>
             <th class="service">NUMERO DENT</th>
-            <th class="desc">ACTE</th>
-            <th class="service">SOUS_ACTE</th>
-            <th class="desc">PRIX</th>
-
-          </tr>
+            <th class="desc">SOUS_ACTE</th>
+            <th class="total">PRIX</th>
+        </tr>
         </thead>
         <tbody>
-            @foreach ($item_factures as $item)
+        @foreach ($item_factures as $item)
             <tr>
                 <td class="service">{{ $item->numero_dent}}</td>
-                <td class="desc">{{ $item->acte->nom}}</td>
-                <td class="service">{{ $item->code->nom}}</td>
-                <td class="desc">{{ $item->code->prix}}</td>
-
+                <td class="desc">{{ $item->code->nom}}</td>
+                <td class="total">{{ $item->code->prix}} F.CFA</td>
             </tr>
-
-          @endforeach
-
-          <tr>
-            <td colspan="3" class="grand total">GRAND TOTAL</td>
+        @endforeach
+        <tr>
+            <td colspan="2" class="grand total">GRAND TOTAL</td>
             <td class="grand total">{{$facture->total}} F.CFA</td>
-          </tr>
+        </tr>
         </tbody>
-      </table>
-      <div id="notices">
+    </table>
+    <div id="notices">
         <div>DATE FACTURE:</div>
         <div class="notice">{{$facture->created_at}}</div>
-        
-      </div>
-    </main>
-    {{-- <footer>
-      Invoice was created on a computer and is valid without the signature and seal.
-    </footer> --}}
-  </body>
+    </div>
+</main>
+<footer>
+    Invoice was created on a computer and is valid without the signature and seal.
+</footer>
+</body>
 </html>

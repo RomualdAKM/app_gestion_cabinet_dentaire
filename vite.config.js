@@ -11,4 +11,14 @@ export default defineConfig({
         }),
         vue(),
     ],
+
+    build: {
+        outDir: 'dist', // Assurez-vous que cette option est correcte
+      },
+
+      server: {
+        proxy: {
+          '/api': 'https://dr-assani.eu/', // Remplacez par l'URL correcte de votre API Laravel
+        },
+      },
 });

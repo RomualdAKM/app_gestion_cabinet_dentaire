@@ -58,10 +58,10 @@ onMounted( async () => {
         <div class="page-body" style="margin-top: 8rem;">
           <div class="grid grid-cols-6 gap-card-gap">
             <div class="col-span-6 md:col-span-12">
-              <div class="card tabs" style="background-color: rgb(163, 23, 165);">
+              <div class="card tabs" style="background-color: #d3d9fc;">
                 <div class="card-header pb-2 header-bottom-border">
                   <div class="flex flex-col">
-                    <h2 class="text-lg font-bold text-primary">MODIFIER CLIENT</h2>
+                    <h2 class="text-lg font-bold text-primary">MODIFIER PATIENT</h2>
                  
                   </div>
                 </div>
@@ -69,45 +69,45 @@ onMounted( async () => {
                   <div class="tabs-content">
                     <div class="tab-pan active show " data-tabContent="1">
                       <div class="checkout-detail">    
-                        <form class="theme-form flex flex-col gap-4 !m-0" style="background-color: rgb(163, 23, 165);">
+                        <form class="theme-form flex flex-col gap-4 !m-0" style="background-color: #d3d9fc;">
                         
                             <div class="grid grid-cols-12 gap-5 sm:gap-3 sm:-mt-1">
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
-                                <label for="sku" style="color: rgb(240, 198, 92); font-weight: 900;">Nom</label>
-                                <input type="text" v-model="customer.nom" id="sku" placeholder="Nom" >
+                                <label for="sku" style="color: black; font-weight: 900;">Nom</label>
+                                <input type="text" v-model="customer.nom" style="color: rgb(112, 107, 107); font-weight: 700;" >
                                 </div>
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
-                                <label for="sku" style="color: rgb(240, 198, 92); font-weight: 900;">Prenom</label>
-                                <input type="email" id="sku" v-model="customer.prenom"  placeholder="Prenom" >
-                                </div>
-                                
-                            </div>
-                            <div class="grid grid-cols-12 gap-5 sm:gap-3 sm:-mt-1">
-                                <div class="col-span-6 2md:col-span-6 sm:col-span-12">
-                                <label for="sku" style="color: rgb(240, 198, 92); font-weight: 900;">Email</label>
-                                <input type="text" v-model="customer.email"  id="sku" placeholder="facultatif">
-                                </div>
-                                <div class="col-span-6 2md:col-span-6 sm:col-span-12">
-                                <label for="sku" style="color: rgb(240, 198, 92); font-weight: 900;">Contact</label>
-                                <input type="text" v-model="customer.telephone"  id="sku" placeholder="Contact Ex=+229956845" >
+                                <label for="sku" style="color: black; font-weight: 900;">Prenom</label>
+                                <input type="email" id="sku" v-model="customer.prenom" style="color: rgb(112, 107, 107); font-weight: 700;" >
                                 </div>
                                 
                             </div>
                             <div class="grid grid-cols-12 gap-5 sm:gap-3 sm:-mt-1">
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
-                                <label for="sku" style="color: rgb(240, 198, 92); font-weight: 900;">Adresse</label>
-                                <input type="text" v-model="customer.adresse"  id="sku" placeholder="Adresse" >
+                                <label for="sku" style="color: black; font-weight: 700;">Email</label>
+                                <input type="text" v-model="customer.email" style="color: rgb(112, 107, 107); font-weight: 700;" >
                                 </div>
                                 <div class="col-span-6 2md:col-span-6 sm:col-span-12">
-                                <label for="sku" style="color: rgb(240, 198, 92); font-weight: 900;">Date de Naissance</label>
-                                <input type="date" v-model="customer.date"  id="sku">
+                                <label for="sku" style="color: black; font-weight: 700;">Contact</label>
+                                <input type="text" v-model="customer.telephone"  style="color: rgb(112, 107, 107); font-weight: 700;" >
+                                </div>
+                                
+                            </div>
+                            <div class="grid grid-cols-12 gap-5 sm:gap-3 sm:-mt-1">
+                                <div class="col-span-6 2md:col-span-6 sm:col-span-12">
+                                <label for="sku" style="color: black; font-weight: 700;">Adresse</label>
+                                <input type="text" v-model="customer.adresse" style="color: rgb(112, 107, 107); font-weight: 700;" >
+                                </div>
+                                <div class="col-span-6 2md:col-span-6 sm:col-span-12">
+                                <label for="sku" style="color: black; font-weight: 700;">Date de Naissance</label>
+                                <input type="date" v-model="customer.date"  style="color: rgb(112, 107, 107); font-weight: 700;" >
                                 </div>
                                 
                             </div>
                          
                           <div class="flex justify-end items-center">
                             <button
-                             class="btn btn-primary bg-warning text-white text-xs font-semibold py-2 !m-0 !w-fit"
+                             class="btn btn-primary bg-primary text-white text-xs font-semibold py-2 !m-0 !w-fit"
                               type="button"
                              @click="editCustomer()">Modifier</button>
                           </div>

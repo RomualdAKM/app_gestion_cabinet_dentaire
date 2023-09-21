@@ -48,10 +48,10 @@ const saveActe = async () => {
         <div class="page-body" style="margin-top: 8rem;">
           <div class="grid grid-cols-6 gap-card-gap">
             <div class="col-span-6 md:col-span-12">
-              <div class="card tabs" style="background-color: rgb(163, 23, 165);">
+              <div class="card tabs" style="background-color: #d3d9fc;">
                 <div class="card-header pb-2 header-bottom-border">
                   <div class="flex flex-col">
-                    <h2 class="text-lg font-bold text-warning">AJOUTER ACTE</h2>
+                    <h2 class="text-lg font-bold text-dark">AJOUTER ACTE</h2>
                  
                   </div>
                 </div>
@@ -59,15 +59,15 @@ const saveActe = async () => {
                   <div class="tabs-content">
                     <div class="tab-pan active show " data-tabContent="1">
                       <div class="checkout-detail">    
-                        <form class="theme-form flex flex-col gap-4 !m-0" style="background-color: rgb(163, 23, 165);">
+                        <form class="theme-form flex flex-col gap-4 !m-0" style="background-color: #c9d0f7;">
                         
                             <div> 
-                                <label for="productName" style="color: rgb(237, 201, 108); font-weight: 900;">Nom</label>
-                                <input type="text" v-model="form.nom"  id="productName" placeholder="Nom">
+                                <label for="productName" style="color: black; font-weight: 700;">Nom</label>
+                                <input type="text" v-model="form.nom"  style="color: rgb(112, 107, 107); font-weight: 700;"  >
                             </div>
                             <div> 
-                                <label for="productName" style="color: rgb(247, 202, 91); font-weight: 900;">Description</label>
-                                <textarea v-model="form.description" placeholder="description">
+                                <label for="productName" style="color: black; font-weight: 700;">Description</label>
+                                <textarea v-model="form.description" style="color: rgb(112, 107, 107); font-weight: 700;" >
 
                                 </textarea>
                             </div>

@@ -11,7 +11,7 @@ const pagination = ref({
   totalPages: 1,
 });
 
-const getCustomers = async (page = 1, perPage = 5) => {
+const getCustomers = async (page = 1, perPage = 20) => {
 
     let response = await axios.get('api/get_customers', {
         params: {
@@ -62,7 +62,7 @@ onMounted( async () => {
         <div class="page-body" style="margin-top: 8rem;">
           <div class="grid grid-cols-12 gap-card-gap">
             <div class="col-span-12" >
-              <div class="card" style="background-color: rgb(145, 197, 252);"> 
+              <div class="card" style="background-color: #E1E4F4;"> 
                 <div class="card-header pb-4">
                   <div  class="flex gap-2 justify-between items-center 3sm:flex-col 3sm:items-end"> 
                     
@@ -161,7 +161,7 @@ onMounted( async () => {
                         </button>
                     </div>
                    
-                    <div class="sm:mt-3"><img src="../../assets/images/ecommerce/paypal2.png" alt="paypal-img"></div>
+                    
                   </div>
                 </div>
               </div>
@@ -189,13 +189,13 @@ onMounted( async () => {
 }
 
 .table th {
-  background-color: rgb(97, 154, 253); /* Couleur de fond de l'en-tête */
+  background-color: rgb(229, 235, 247); /* Couleur de fond de l'en-tête */
   color: white;
   text-transform: uppercase;
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: rgb(116, 181, 252); /* Couleur de fond des lignes paires */
+  background-color: rgb(223, 237, 253); /* Couleur de fond des lignes paires */
 }
 
 .table tbody tr:hover {

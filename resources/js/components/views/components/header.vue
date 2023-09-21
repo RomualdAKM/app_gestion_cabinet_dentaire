@@ -2,7 +2,7 @@
   <!-- Page Header start-->
   <header class="fixed top-0 z-[6] xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto">
           <div class="page-header transition-all  shadow-header dark:bg-sidebar-dark">
-            <div class="py-[11px] flex items-center xl:relative justify-between px-body-space gap-4" style="background-color: rgb(99, 171, 248);">
+            <div class="py-[11px] flex items-center xl:relative justify-between px-body-space gap-4" style="background-color: #E1E4F4;">
               <div class="left-header flex items-center gap-2">
                 <button class="sidebar-toggle hide">
                   <svg class="w-6 4xl:w-5 h-6 4xl:h-5 stroke-title">
@@ -22,9 +22,9 @@
                     <!-- Profile Start -->
                     <div class="dropdown">
                       <div class="flex items-center gap-[10px] cursor-pointer">
-                        <div><img class="w-[calc(35px_+_(40_-_35)_*_((100vw_-_320px)_/_(1920_-_320)))] h-[calc(35px_+_(40_-_35)_*_((100vw_-_320px)_/_(1920_-_320)))] rounded-full" src="../../assets/images/avatar/1.jpg" alt="avatar"></div>
+                        <div></div>
                         <div class="md:hidden">
-                          <h4 class="text-xs font-bold dark:text-white"> Helen Walter</h4><span class="flex items-center gap-1 font-semibold text-3xs text-content">Admin
+                          <h4 class="text-xs font-bold dark:text-white"> Dr Fatima ASSANI AGBANRIN</h4><span class="flex items-center gap-1 font-semibold text-3xs text-content">Admin
                             <svg class="w-[6px] h-[4px]  dark:stroke-white">
                               <use href="https://admin.pixelstrap.com/govo/assets/svg/sprite.svg#Fill-Arrow"> </use>
                             </svg></span>
@@ -32,22 +32,8 @@
                       </div>
                       <div class="dropdown-menu !min-w-[170px]">
                         <ul class="flex flex-col gap-3">
-                          <li><a class="flex items-center gap-2 text-title" href="user-profile.html">
-                              <svg class="w-[18px] h-[18px] stroke-title dark:stroke-white">
-                                <use href="https://admin.pixelstrap.com/govo/assets/svg/sprite.svg#2-User"> </use>
-                              </svg>Profile Setting</a></li>
-                          <li><a class="flex items-center gap-2 text-title" href="chat-app.html">
-                              <svg class="w-[18px] h-[18px] stroke-title dark:stroke-white">
-                                <use href="https://admin.pixelstrap.com/govo/assets/svg/sprite.svg#More-Square"> </use>
-                              </svg>Message</a></li>
-                          <li><a class="flex items-center gap-2 text-title" href="todo.html">
-                              <svg class="w-[18px] h-[18px] stroke-title dark:stroke-white">
-                                <use href="https://admin.pixelstrap.com/govo/assets/svg/sprite.svg#Edit-Square"> </use>
-                              </svg>Taskboard</a></li>
-                          <li><a class="flex items-center gap-2 text-title" href="knowledgebase.html">
-                              <svg class="w-[18px] h-[18px] stroke-title dark:stroke-white">
-                                <use href="https://admin.pixelstrap.com/govo/assets/svg/sprite.svg#Shield-Done"> </use>
-                              </svg>Help</a></li>
+                         
+                          
                           <li><a class="flex items-center gap-2 text-title" href="javascript:void(0)">
                               <svg class="w-[18px] h-[18px] stroke-title dark:stroke-white">
                                 <use href="https://admin.pixelstrap.com/govo/assets/svg/sprite.svg#Login"> </use>

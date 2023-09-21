@@ -61,7 +61,7 @@ onMounted( async()=>{
         <div class="page-body" style="margin-top: 8rem;">
           <div class="grid grid-cols-12 gap-card-gap">
             <div class="col-span-12">
-              <div class="card" style="background-color: rgb(155, 11, 168);"> 
+              <div class="card" style="background-color: #E1E4F4;"> 
                 <div class="card-header pb-4">
                   <div class="flex gap-2 justify-between items-center 3sm:flex-col 3sm:items-end"> 
                     
@@ -82,10 +82,10 @@ onMounted( async()=>{
                     <table class="table equal-space table-action invoice">
                       <thead> 
                         <tr>
-                          <th style="color: gold; text-transform: uppercase;">Nom</th>
-                          <th style="color: gold; text-transform: uppercase;">Description</th>
+                          <th style="color: rgb(11, 79, 151); text-transform: uppercase;">Nom</th>
+                          <th style="color: rgb(11, 79, 151); text-transform: uppercase;">Description</th>
                           
-                          <th style="color: gold; text-transform: uppercase;">Action</th>
+                          <th style="color: rgb(11, 79, 151); text-transform: uppercase;">Action</th>
                         </tr>
                       </thead>
                       <tbody> 
@@ -95,12 +95,12 @@ onMounted( async()=>{
                               <div class="flex items-center gap-[.5625rem]">
                               
                                 <div><a href="invoice-preview.html">
-                                    <h4 class="text-xs font-bold text-white">{{ acte.nom }}</h4></a></div>
+                                    <h4 class="text-xs font-bold text-dark">{{ acte.nom }}</h4></a></div>
                               </div>
                             </div>
                           </td>
                           <td class="min-w-[7.5rem]"> 
-                            <h4 class="text-xs font-bold text-white">{{ acte.description }}</h4>
+                            <h4 class="text-xs font-bold text-dark">{{ acte.description }}</h4>
                           </td>
                           <td class="min-w-[3.125rem] text-right">
                             <div class="items-center gap-3 flex 2lg:hidden">
@@ -149,7 +149,6 @@ onMounted( async()=>{
                           </svg>
                         </button>
                     </div>
-                    <div class="sm:mt-3"><img src="../../assets/images/ecommerce/paypal2.png" alt="paypal-img"></div>
                   </div>
                 </div>
               </div>

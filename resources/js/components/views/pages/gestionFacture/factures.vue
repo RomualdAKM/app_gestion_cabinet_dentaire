@@ -26,7 +26,7 @@ import debounce from 'lodash/debounce'
 
         }
 
-    const getFactures = async(page = 1, perPage = 5)=>{
+    const getFactures = async(page = 1, perPage = 20)=>{
       let response = await axios.get('api/get_factures', {
             params: {
             page,
@@ -69,7 +69,7 @@ import debounce from 'lodash/debounce'
         <div class="page-body" style="margin-top: 8rem;">
           <div class="grid grid-cols-12 gap-card-gap">
             <div class="col-span-12">
-              <div class="card" style="background-color: rgb(155, 11, 168);">
+              <div class="card" style="background-color: #E1E4F4;">
                 <div class="card-header pb-4">
                   <div class="flex gap-2 justify-between items-center 3sm:flex-col 3sm:items-end">
                     <div class="flex items-center m-0">
@@ -93,12 +93,12 @@ import debounce from 'lodash/debounce'
                     <table class="table equal-space table-action invoice">
                       <thead>
                         <tr>
-                          <th style="color: gold; text-transform: uppercase;">Numero Facture</th>
+                          <th style="color: black; text-transform: uppercase;">Numero Facture</th>
                           
-                          <th style="color: gold; text-transform: uppercase;">Client</th>
-                          <th style="color: gold; text-transform: uppercase;">Date</th>
-                          <th style="color: gold; text-transform: uppercase;">Total</th>
-                          <th style="color: gold; text-transform: uppercase;">Action</th>
+                          <th style="color: black; text-transform: uppercase;">Client</th>
+                          <th style="color: black; text-transform: uppercase;">Date</th>
+                          <th style="color: black; text-transform: uppercase;">Total</th>
+                          <th style="color: black; text-transform: uppercase;">Action</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -108,19 +108,19 @@ import debounce from 'lodash/debounce'
                               <div class="flex items-center gap-[.5625rem]">
 
                                 <div><a href="invoice-preview.html">
-                                    <h4 class="text-xs font-semibold text-white">{{ facture.id }}</h4></a></div>
+                                    <h4 class="text-xs font-semibold text-dark">{{ facture.id }}</h4></a></div>
                               </div>
                             </div>
                           </td>
                          
                           <td class="min-w-[7.5rem]">
-                            <h4 class="text-xs font-semibold text-white">{{ facture.client.nom }}</h4>
+                            <h4 class="text-xs font-semibold text-dark">{{ facture.client.nom }}</h4>
                           </td>
                           <td class="min-w-[7.5rem]">
-                            <h4 class="text-xs font-semibold text-white">{{ facture.created_at }}</h4>
+                            <h4 class="text-xs font-semibold text-dark">{{ facture.created_at }}</h4>
                           </td>
                           <td class="min-w-[7.5rem]">
-                            <h4 class="text-xs font-semibold text-white">{{ facture.total }} F.CFA</h4>
+                            <h4 class="text-xs font-semibold text-dark">{{ facture.total }} F.CFA</h4>
                           </td>
                           <td class="min-w-[3.125rem] text-right">
                             <div class="items-center gap-3 flex 2lg:hidden">
