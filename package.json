@@ -24,7 +24,6 @@
         "debounce": "^1.2.1",
         "sweetalert2": "^11.7.27",
         "vue": "^3.2.36",
-        "vue-loader": "^17.0.1",
         "vue-router": "^4.0.13"
     }
 }

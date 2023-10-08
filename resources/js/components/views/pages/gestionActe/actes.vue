@@ -10,7 +10,7 @@ const pagination = ref({
   totalPages: 1,
 });
 
-const getActes = async(page = 1, perPage = 5)=>{
+const getActes = async(page = 1, perPage = 20)=>{
   let response = await axios.get('api/get_actes', {
         params: {
         page,
@@ -83,8 +83,7 @@ onMounted( async()=>{
                       <thead> 
                         <tr>
                           <th style="color: rgb(11, 79, 151); text-transform: uppercase;">Nom</th>
-                          <th style="color: rgb(11, 79, 151); text-transform: uppercase;">Description</th>
-                          
+                         
                           <th style="color: rgb(11, 79, 151); text-transform: uppercase;">Action</th>
                         </tr>
                       </thead>
@@ -99,9 +98,7 @@ onMounted( async()=>{
                               </div>
                             </div>
                           </td>
-                          <td class="min-w-[7.5rem]"> 
-                            <h4 class="text-xs font-bold text-dark">{{ acte.description }}</h4>
-                          </td>
+                          
                           <td class="min-w-[3.125rem] text-right">
                             <div class="items-center gap-3 flex 2lg:hidden">
 
@@ -130,7 +127,7 @@ onMounted( async()=>{
                         <button
                           class="btn border border-border-light rounded-none flex items-center gap-2 hover:bg-primary dark:border-border-dark group hover:text-white"
                           :disabled="pagination.currentPage === 1"
-                          @click="getCustomers(pagination.currentPage - 1)"
+                          @click="getActes(pagination.currentPage - 1)"
                         >
                           <svg class="w-4 h-4 stroke-title group-hover:stroke-white">
                             <!-- Icône de la flèche gauche -->
@@ -141,7 +138,7 @@ onMounted( async()=>{
                         <button
                           class="btn border border-border-light rounded-none flex items-center gap-2 hover:bg-primary dark:border-border-dark group hover:text-white"
                           :disabled="pagination.currentPage === pagination.totalPages"
-                          @click="getCustomers(pagination.currentPage + 1)"
+                          @click="getActes(pagination.currentPage + 1)"
                         >
                           <span class="sm:hidden">Suivant</span>
                           <svg class="w-4 h-4 stroke-title group-hover:stroke-white">

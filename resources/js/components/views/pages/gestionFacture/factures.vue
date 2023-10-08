@@ -95,7 +95,7 @@ import debounce from 'lodash/debounce'
                         <tr>
                           <th style="color: black; text-transform: uppercase;">Numero Facture</th>
                           
-                          <th style="color: black; text-transform: uppercase;">Client</th>
+                          <th style="color: black; text-transform: uppercase;">Patient</th>
                           <th style="color: black; text-transform: uppercase;">Date</th>
                           <th style="color: black; text-transform: uppercase;">Total</th>
                           <th style="color: black; text-transform: uppercase;">Action</th>

@@ -8,6 +8,7 @@ let form = reactive({
 
   nom:"",
   prix:"", 
+  description:"",
   acte_id:"",
 
 })
@@ -77,6 +78,12 @@ onMounted( async () =>{
                                 <input type="text" v-model="form.nom" style="color: rgb(112, 107, 107); font-weight: 700;">
                             </div>
                             <div> 
+                                <label for="productName" style="color: black; font-weight: 700;">Description</label>
+                                <textarea v-model="form.description" style="color: rgb(112, 107, 107); font-weight: 700;" >
+
+                                </textarea>
+                            </div>
+                            <div> 
                                 <label for="productName" style="color: black; font-weight: 700;">Prix</label>
                                 <input type="number" v-model="form.prix" style="color: rgb(112, 107, 107); font-weight: 700;" placeholder="sans espace">
                             </div>
@@ -84,7 +91,7 @@ onMounted( async () =>{
                             <label for="number" style="color: black; font-weight: 700;">Acte</label>
                             <select  v-model="form.acte_id"  class="form-select block w-full px-3 text-xs font-normal text-content3 bg-white bg-clip-padding bg-no-repeat border border-border-light rounded-5 transition ease-in-out m-0 min-w-[150px] py-[9px] dark:border-border-dark dark:bg-sidebar-dark2" id="status" aria-label="Default select example">
                             
-                            <option v-for="acte in actes" :key="acte.id" :value="acte.id">{{acte.nom}}</option>
+                            <option v-for="acte in actes" :key="acte.id" :value="acte.id">{{acte.nom}} - {{ acte.created_at }}</option>
 
                             </select>
                             </div>

@@ -41,7 +41,7 @@ class ActeController extends Controller
 
         $validator = Validator::make($request->all(), [
             'nom' => 'required',
-            'description' => 'required',                
+                          
         ]);
 
         if ($validator->fails()) {
@@ -57,7 +57,7 @@ class ActeController extends Controller
 
         $acte = new Acte();
         $acte->nom = $request->nom;
-        $acte->description = $request->description;
+        $acte->description = "vide";
        
         $acte->save();
 
@@ -85,7 +85,7 @@ class ActeController extends Controller
 
         $validator = Validator::make($request->all(), [
             'nom' => 'required',
-            'description' => 'required',
+           
 
         ]);
 
@@ -102,7 +102,7 @@ class ActeController extends Controller
 
         $acte = Acte::find($id);
         $acte->nom = $request->nom;
-        $acte->description = $request->description;
+        $acte->description = "vide";
         
         $acte->save();
 

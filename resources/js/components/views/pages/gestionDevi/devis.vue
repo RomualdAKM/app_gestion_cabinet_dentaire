@@ -93,9 +93,9 @@ import debounce from 'lodash/debounce'
                     <table class="table equal-space table-action invoice">
                       <thead>
                         <tr>
-                          <th style="color: gold; text-transform: uppercase;">Numero Devi</th>
+                          <th style="color: rgb(11, 11, 11); text-transform: uppercase;">Numero Devis</th>
                           
-                          <th style="color: black; text-transform: uppercase;">Client</th>
+                          <th style="color: black; text-transform: uppercase;">Patient</th>
                           <th style="color: black; text-transform: uppercase;">Date</th>
                           <th style="color: black; text-transform: uppercase;">Total</th>
                           <th style="color: black; text-transform: uppercase;">Action</th>

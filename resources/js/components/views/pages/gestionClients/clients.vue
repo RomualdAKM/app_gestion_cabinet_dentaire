@@ -195,7 +195,7 @@ onMounted( async () => {
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: rgb(223, 237, 253); /* Couleur de fond des lignes paires */
+  background-color: rgb(244, 246, 249); /* Couleur de fond des lignes paires */
 }
 
 .table tbody tr:hover {

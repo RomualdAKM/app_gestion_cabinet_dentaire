@@ -21,14 +21,15 @@ import Base from './components/base.vue'
                   <p class="text-xs font-semibold text-content-white leading-[22px] max-w-[285px] mt-1 2md:line-clamp-2 sm:line-clamp-none">Bienvenu dans votre application .</p>
                   <button class="mt-6 sm:mt-4 rounded-5 py-[8px] px-4 bg-white text-xs font-bold text-title dark:bg-sidebar-dark2 hover:text-primary">What New!</button>
                 </div>
-                <div class="relative bg-img"> <img class="img-fluid welcome-img w-25 h-" src="./../imgs/dent-dent.jpg" 
+                <div class=" bg-img"> <img class="img-fluid welcome-img w-25 h-" src="./../imgs/image.png" 
                   alt="welcome-image">
-                  <img class="w-[28px] h-[28px] common-animate animate-ping top-[14px] 6xl:top-[30px] 
+                  
+                  <!-- <img class="w-[28px] h-[28px] common-animate animate-ping top-[14px] 6xl:top-[30px] 
                   4xl:top-[14px] absolute left-[10%] 2md:left-[24%] sm:left-[10%] animate__animated animate__infinite animate__shakeY 
                   animate__slower" src="https://admin.pixelstrap.com/govo/assets/images/svg/done.svg" alt="welcome-done-image">
                   <img class="w-24 h-w-24 common-animate animate-ping top-[-10%] 6xl:top-[4%] 4xl:top-[-10%] absolute right-[2%]
                    2md:right-[17%] sm:right-[2%] left-unset  animate__animated animate__infinite animate__shakeY animate__slower" 
-                   src="https://admin.pixelstrap.com/govo/assets/images/svg/rocket.svg" alt="welcome-rocket-image">
+                   src="https://admin.pixelstrap.com/govo/assets/images/svg/rocket.svg" alt="welcome-rocket-image"> -->
                   </div>
               </div>
             </div>
@@ -41,7 +42,7 @@ import Base from './components/base.vue'
                         <div class="flex items-center justify-between">
                           <div>
                             <h3 class="text-lg font-bold leading-none text-title">Revenu</h3>
-                            <h4 class="flex items-center mt-[12px] text-2xl 5xl:text-lg 4xl:text-base font-extrabold text-title gap-[7px]">0000 F
+                            <h4 class="flex items-center mt-[12px] text-2xl 5xl:text-lg 4xl:text-base font-extrabold text-title gap-[7px]">
                               </h4>
                           </div>
                           
@@ -57,8 +58,8 @@ import Base from './components/base.vue'
                       <div>
                         <div class="flex items-center justify-between">
                           <div>
-                            <h3 class="text-lg font-bold leading-none text-title">Nombre de Client</h3>
-                            <h4 class="flex items-center mt-[12px] text-2xl 5xl:text-lg 4xl:text-base font-extrabold text-title gap-[7px]">10
+                            <h3 class="text-lg font-bold leading-none text-title">Nombre de Patient</h3>
+                            <h4 class="flex items-center mt-[12px] text-2xl 5xl:text-lg 4xl:text-base font-extrabold text-title gap-[7px]">
                               </h4>
                           </div>
                           

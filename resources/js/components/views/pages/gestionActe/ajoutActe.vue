@@ -65,12 +65,7 @@ const saveActe = async () => {
                                 <label for="productName" style="color: black; font-weight: 700;">Nom</label>
                                 <input type="text" v-model="form.nom"  style="color: rgb(112, 107, 107); font-weight: 700;"  >
                             </div>
-                            <div> 
-                                <label for="productName" style="color: black; font-weight: 700;">Description</label>
-                                <textarea v-model="form.description" style="color: rgb(112, 107, 107); font-weight: 700;" >
-
-                                </textarea>
-                            </div>
+                           
                          
                           <div class="flex justify-end items-center">
                             <button

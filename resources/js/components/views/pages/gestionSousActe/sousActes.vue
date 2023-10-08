@@ -80,6 +80,7 @@
                       <thead> 
                         <tr>
                           <th style="color: black; text-transform: uppercase;">Nom</th>
+                          <th style="color: black; text-transform: uppercase;">Description</th>
                           <th style="color: black; text-transform: uppercase;">Prix</th>
                           <th style="color: black; text-transform: uppercase;">Acte</th>
                           <th style="color: black; text-transform: uppercase;">Action</th>
@@ -95,6 +96,8 @@
                                     <h4 class="text-xs font-semibold text-dark">{{ code.nom }}</h4></a></div>
                               </div>
                             </div>
+                          </td><td class="min-w-[7.5rem]"> 
+                            <h4 class="text-xs font-semibold text-dark">{{ code.description }} </h4>
                           </td>
                           <td class="min-w-[7.5rem]"> 
                             <h4 class="text-xs font-semibold text-dark">{{ code.prix }}  F.CFA</h4>

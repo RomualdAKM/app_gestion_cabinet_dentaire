@@ -2,7 +2,7 @@
   <!-- Page Header start-->
   <header class="fixed top-0 z-[6] xl:w-full 4xl:w-[calc(100%_-_14.375rem)] w-[calc(100%_-_15.8125rem)] ml-auto">
           <div class="page-header transition-all  shadow-header dark:bg-sidebar-dark">
-            <div class="py-[11px] flex items-center xl:relative justify-between px-body-space gap-4" style="background-color: #E1E4F4;">
+            <div class="py-[11px] flex items-center xl:relative justify-between px-body-space gap-4" style="background-color: #a2aff9;">
               <div class="left-header flex items-center gap-2">
                 <button class="sidebar-toggle hide">
                   <svg class="w-6 4xl:w-5 h-6 4xl:h-5 stroke-title">

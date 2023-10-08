@@ -136,10 +136,10 @@ onMounted(async () => {
                         <div class="card-header pb-2 header-bottom-border">
                             <div class="flex flex-col">
                                 <h2 class="text-lg font-extrabold text-dark">
-                                    AJOUTER DEVI
+                                    AJOUTER DEVIS
                                 </h2>
 
-                                <img src="./../../../imgs/dent-dent.jpg" alt="avatar" class="h-25 w-30"/>
+                                <img src="./../../../imgs/image.png" alt="avatar" class="h-25 w-30"/>
 
                             </div>
                         </div>
@@ -160,7 +160,7 @@ onMounted(async () => {
                                            
                                             <div>
                                                 <label for="number" style="color: black; font-weight: 900;"
-                                                        >Client</label
+                                                        >Patient</label
                                                     >
                                                     <select
                                                         v-model="form.client_id"
@@ -300,6 +300,66 @@ onMounted(async () => {
                                                         <option value="48">
                                                             48
                                                         </option>
+                                                        <option value="51">
+                                                            51
+                                                        </option>
+                                                        <option value="52">
+                                                            52
+                                                        </option>
+                                                        <option value="53">
+                                                            53
+                                                        </option>
+                                                        <option value="54">
+                                                            54
+                                                        </option>
+                                                        <option value="55">
+                                                            55
+                                                        </option>
+                                                        <option value="61">
+                                                            61
+                                                        </option>
+                                                        <option value="62">
+                                                            62
+                                                        </option>
+                                                        <option value="63">
+                                                            63
+                                                        </option>
+                                                        <option value="64">
+                                                            64
+                                                        </option>
+                                                        <option value="65">
+                                                            65
+                                                        </option>
+                                                        <option value="71">
+                                                            71
+                                                        </option>
+                                                        <option value="72">
+                                                            72
+                                                        </option>
+                                                        <option value="73">
+                                                            73
+                                                        </option>
+                                                        <option value="74">
+                                                            74
+                                                        </option>
+                                                        <option value="75">
+                                                            75
+                                                        </option>
+                                                        <option value="81">
+                                                            81
+                                                        </option>
+                                                        <option value="82">
+                                                            82
+                                                        </option>
+                                                        <option value="83">
+                                                            83
+                                                        </option>
+                                                        <option value="84">
+                                                            84
+                                                        </option>
+                                                        <option value="85">
+                                                            85
+                                                        </option>
                                                         
                                                     </select>
                                                 </div>
@@ -393,7 +453,7 @@ onMounted(async () => {
                                                     type="button"
                                                     @click="saveDevi()"
                                                 >
-                                                    Créer Devi
+                                                    Créer Devis
                                                 </button>
                                             </div>
                                         </form>

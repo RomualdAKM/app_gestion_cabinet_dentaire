@@ -1,0 +1,33 @@
+/*! -----------------------------------------------------------------------------------
+
+    Template Name: Govo Admin
+    Template URI: http://admin.pixelstrap.com/govo/theme
+    Description: This is Admin theme
+    Author: Pixelstrap
+    Author URI: https://themeforest.net/user/pixelstrap
+
+-----------------------------------------------------------------------------------
+
+        01. Hex Code Convert To Rgba Number Js
+        02. Search Js
+        03. Language Select Js
+        04. Header Drop Down Toggle
+        05. Plus Minus Item Js 
+        06. Cart Item Remove js
+        07. Tabs Js
+        08. Copy Js
+        09. Collapse Js
+        10. Countdown Js
+        11. Todo List Edit Delete Js 
+        12. Password Show hide js
+        13. Close alert js 
+        14. Wishlist Remove js
+        15. List-item Remove js
+        16. Following js
+        17. Add Friends js
+        18. suggestion js
+        19. Fill svg js
+        20. Accept voice call js
+        21. Blog sidebar js
+
+ --------------------------------------------------------------------------------- */

@@ -59,6 +59,7 @@ class CodeController extends Controller
         $code = new Code();
         $code->nom = $request->nom;
         $code->prix = $request->prix;
+        $code->description = $request->description;
         $code->acte_id = $request->acte_id;
 
         $code->save();
@@ -96,6 +97,7 @@ class CodeController extends Controller
 
         $code->nom = $request->nom;
         $code->prix = $request->prix;
+        $code->description = $request->description;
         $code->acte_id = $request->acte_id;
 
         $code->save();

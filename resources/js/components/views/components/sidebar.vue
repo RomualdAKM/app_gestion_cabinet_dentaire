@@ -2,9 +2,9 @@
   <!-- Sidebar Start -->
   <div class="page-sidebar sidebar-dark unique-sidebar" style="background-color: #E1E4F4;">
     <aside class="sidebar">
-      <div class="logo-wrapper"><a href="index.html"> </a>
+      <div class="logo-wrapper" style="background-color: #a2aff9; border: none;">
         <button class="sidebar-btn">
-          <svg class="w-6 h-6">
+          <svg class="w-6 h-5">
             <use href="https://admin.pixelstrap.com/govo/assets/svg/sprite.svg#Category"> </use>
           </svg>
         </button>
@@ -12,7 +12,7 @@
 
       <nav class="sidebar-main">
         <ul class="sidebar-links custom-scroll">
-          <li class="title" style="color: rgb(11, 79, 151); font-size: 15px;">Gestion Patients</li>
+          <li class="title" style="color: rgb(11, 79, 151); font-size: 13px;">Gestion Patients</li>
           <li class="sidebar-list">
             <a class="sidebar-link sidebar-title">
               <router-link to="/clients" class="sidebar-name" style="color: black;"><i class="fas fa-users"></i> Liste Patients</router-link>
@@ -22,7 +22,7 @@
             </a>
           </li>
 
-          <li class="title" style="color: rgb(11, 79, 151); font-size: 15px;">Gestion Acte</li>
+          <li class="title" style="color: rgb(11, 79, 151); font-size: 13px;">Gestion Actes</li>
           <li class="sidebar-list">
             <a class="sidebar-link sidebar-title">
               <router-link to="/actes" class="sidebar-name" style="color: black;"><i class="fas fa-list"></i> Liste Actes</router-link>
@@ -31,13 +31,13 @@
               <router-link to="/ajouter_acte" class="sidebar-name" style="color: black;"><i class="fas fa-plus"></i> Ajouter Acte</router-link>
             </a>
             <a class="sidebar-link sidebar-title mt-3">
-              <router-link to="/sous_actes" class="sidebar-name" style="color: black;"><i class="fas fa-list-alt"></i> Liste Sous_Acte</router-link>
+              <router-link to="/sous_actes" class="sidebar-name" style="color: black;"><i class="fas fa-list-alt"></i> Liste Sous_Actes</router-link>
             </a>
             <a class="sidebar-link sidebar-title mt-3">
               <router-link to="/ajouter_sous_acte" class="sidebar-name" style="color: black;"><i class="fas fa-plus-square"></i> Ajouter Sous_Acte</router-link>
             </a>
           </li>
-          <li class="title" style="color: rgb(11, 79, 151); font-size: 15px;">Gestion Facture</li>
+          <li class="title" style="color: rgb(11, 79, 151); font-size: 13px;">Gestion Factures</li>
           <li class="sidebar-list">
             <a class="sidebar-link sidebar-title">
               <router-link to="/ajouter_facture" class="sidebar-name" style="color: black;"> <i class="fas fa-file-invoice"></i> Ajouter Facture</router-link>
@@ -46,13 +46,13 @@
               <router-link to="/factures" class="sidebar-name" style="color: black;"><i class="fas fa-file-alt"></i> Liste Factures</router-link>
             </a>
           </li>
-          <li class="title font-extrabold" style="color: rgb(11, 79, 151); font-size: 15px;">Gestion Devi</li>
+          <li class="title font-extrabold" style="color: rgb(11, 79, 151); font-size: 13px;">Gestion Devis</li>
           <li class="sidebar-list">
             <a class="sidebar-link sidebar-title">
-              <router-link to="/ajouter_devi" class="sidebar-name" style="color: black;"><i class="fas fa-file-signature"></i> Ajouter Devi</router-link>
+              <router-link to="/ajouter_devi" class="sidebar-name" style="color: black;"><i class="fas fa-file-signature"></i> Ajouter Devis</router-link>
             </a>
             <a class="sidebar-link sidebar-title mt-3">
-              <router-link to="/devis" class="sidebar-name" style="color: black;"><i class="fas fa-file-contract"></i> Liste Devi</router-link>
+              <router-link to="/devis" class="sidebar-name" style="color: black;"><i class="fas fa-file-contract"></i> Liste Devis</router-link>
             </a>
           </li>
         </ul>

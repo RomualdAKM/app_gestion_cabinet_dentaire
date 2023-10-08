@@ -11,6 +11,7 @@ const sousacteId = ref(route.params.sousacteId)
 let code = ref({
   nom:"",
   prix:"",
+  description:"",
   acte_id:"",
    
 })
@@ -77,6 +78,12 @@ onMounted( async () => {
                             <div> 
                                 <label for="productName" style="color: black; font-weight: 700;">Nom</label>
                                 <input type="text" v-model="code.nom" style="color: rgb(112, 107, 107); font-weight: 700;">
+                            </div>
+                            <div> 
+                                <label for="productName" style="color: black; font-weight: 700;">Description</label>
+                                <textarea v-model="code.description" style="color: rgb(112, 107, 107); font-weight: 700;" >
+
+                                </textarea>
                             </div>
                             <div>
                                 <label for="productName" style="color: black; font-weight: 700;">Prix</label>

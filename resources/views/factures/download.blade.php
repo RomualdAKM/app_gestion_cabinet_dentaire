@@ -100,17 +100,18 @@
 <header class="clearfix">
     <h1>Facture - {{$facture->id}}</h1>
     <div id="company" class="clearfix">
-        <div>Dr Fatima ASSANI AGBANRIN</div>
-        <div>Cabinet dentaire ABOLORÊ  ,<br /> cotonou, Haie Vive</div>
-        <div>(229) 20 22 03 42</div>
-        <div>(229) 45 72 72 72</div>
-        <div>cabinetdentaire.abolore@outlook.com</a></div>
-        <div>IFU 3202256943894</a></div>
+        <div><span>NOM PATIENT :</span> {{ $client->nom }}  </div>
+        <div><span>PRENOM PATIENT :</span>  {{ $client->prenom}}</div>
+        <div><span>ADRESSE :</span> {{ $client->adresse }}</div>
     </div>
     <div id="project">
-        <div><span>NOM CLIENT</span> {{ $client->nom }}  </div>
-        <div><span>PRENOM CLIENT</span>  {{ $client->prenom}}</div>
-        <div><span>ADRESSE</span> {{ $client->adresse }}</div>
+        <div>Dr Fatima ASSANI AGBANRIN</div>
+        <div>Cabinet dentaire ABOLORÊ,<br />Cotonou, Haie Vive</div>
+        <div>TELEPHONE : (229) 20 22 03 42</div>
+        <div>WHATSAPP : (229) 45 72 72 72</div>
+        <div>cabinetdentaire.abolore@outlook.com</a></div>
+        <div>IFU 3202256943894</a></div>
+        
     </div>
 </header>
 <main>
@@ -118,8 +119,8 @@
         <thead>
         <tr>
             <th class="service">NUMERO DENT</th>
-            <th class="desc">SOUS_ACTE</th>
-            <th class="total">PRIX</th>
+            <th class="desc">NATURE DE L'ACTE</th>
+            <th class="total">HONORAIRES</th>
         </tr>
         </thead>
         <tbody>
