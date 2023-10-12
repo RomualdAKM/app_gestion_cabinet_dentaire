@@ -53,6 +53,8 @@ Route::controller(CodeController::class)->group(function(){
         Route::get('get_code/{id}','get_code');
         Route::post('update_code/{id}','update_code');
         Route::get('delete_code/{id}','delete_code');
+        Route::get('delete_facture/{id}','delete_facture');
+
 
 });
 
@@ -61,12 +63,14 @@ Route::controller(FactureController::class)->group(function(){
         Route::post('download_facture','download_facture');
         Route::post('send_facture','send_facture');
         Route::get('get_factures','get_factures');
+
 });
 
 Route::controller(DeviController::class)->group(function(){
         Route::post('create_devi','create_devi');
         Route::post('download_devi','download_devi');
         Route::post('send_devi','send_devi');
+        Route::get('delete_devi/{id}','delete_devi');
         Route::get('get_devis','get_devis');
 });
 

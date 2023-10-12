@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 use PDF;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Devi;
 use App\Models\Client;
@@ -143,4 +142,10 @@ class DeviController extends Controller
 
              }
 
+             public function delete_devi($id){
+                 //dd($id);
+                 $devi = Devi::findOrFail($id);
+                 $devi->delete();
+
+             }
 }

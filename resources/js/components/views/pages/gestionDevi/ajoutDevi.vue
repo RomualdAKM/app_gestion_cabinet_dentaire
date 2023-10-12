@@ -173,7 +173,7 @@ onMounted(async () => {
                                                             :key="client.id"
                                                             :value="client.id"
                                                         >
-                                                            {{ client.nom }}
+                                                            {{ client.nom }} {{ client.prenom }}
                                                         </option>
                                                     </select>
                                             </div>

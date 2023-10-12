@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Code;
+use App\Models\Facture;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -125,5 +126,11 @@ class CodeController extends Controller
 
         $code = Code::findOrFail($id);
         $code->delete();
+       }
+
+       public function delete_facture($id){
+
+        $facture = Facture::findOrFail($id);
+        $facture->delete();
        }
 }

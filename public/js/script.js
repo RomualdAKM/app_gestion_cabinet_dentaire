@@ -1,2 +1,443 @@
-/*! For license information please see script.js.LICENSE.txt */
-(()=>{"use strict";window.addEventListener("load",(function(){var e=document.querySelectorAll(".bg-img");for(T=0;T<e.length;T++){var t=e[T];t.classList.contains("bg-top")?t.parentNode.classList.add("b-top"):t.classList.contains("bg-bottom")?t.parentNode.classList.add("b-buttom"):t.classList.contains("bg-center")?t.parentNode.classList.add("b-center"):t.classList.contains("bg-left")?t.parentNode.classList.add("b-left"):t.classList.contains("bg-right")&&t.parentNode.classList.add("b-right"),t.classList.contains("blur-up")&&t.parentNode.classList.add("blur-up","lazyload"),t.classList.contains("bg_size_content")&&t.parentNode.classList.add("b_size_content"),t.parentNode.classList.add("bg-size");t.src;t.style.display="none"}}));var e=document.querySelector(".search-show"),t=document.querySelector(".search-close"),n=document.querySelector(".search-box-wrapper");null==e||e.addEventListener("click",(function(){n.classList.remove("lg:scale-0","lg:opacity-0","lg:invisible")})),null==t||t.addEventListener("click",(function(){n.classList.add("lg:scale-0","lg:opacity-0","lg:invisible")}));document.querySelector(".language-select");var o=document.getElementById("language-select"),l=document.querySelector(".language-menu");null==l||l.addEventListener("click",(function(e){var t=e.target.closest(".language-option");if(t){var n=t.dataset.value,l=t.querySelector("img").src;o.querySelector("img").src=l,o.querySelector("span").textContent=n}}));var s=document.querySelectorAll(".dropdown");document.body.addEventListener("click",(function(e){var t,n=e.target.closest(".dropdown"),o=null==n||null===(t=n.closest(".dropdown"))||void 0===t?void 0:t.classList.contains("show"),l=e.target.closest(".dropdown-menu");s.forEach((function(e){l||e.classList.remove("show")})),n&&(o||n.classList.contains("on-hover-show")||null==n||n.classList.add("show"))})),document.querySelectorAll(".plus-minus ").forEach((function(e){var t=e.querySelector(".add"),n=e.querySelector(".sub");null==t||t.addEventListener("click",(function(){var e=this.parentNode.querySelector("input[type='number']");e.value<20&&(e.value=Number(e.value)+1)})),null==n||n.addEventListener("click",(function(){var e=this.parentNode.querySelector("input[type='number']");e.value>=2&&(e.value=Number(e.value)-1)}))}));var c=document.querySelector(".shopping-bag"),r=null==c?void 0:c.querySelectorAll(".remove-cart");null==r||r.forEach((function(e){e.addEventListener("click",(function(){this.closest(".cart-item").style.display="none"}))}));var i=document.querySelectorAll(".tabs");function a(){var e=this,t=this.closest(".copyParent").querySelector("pre").textContent;navigator.clipboard.writeText(t),this.innerHTML=' \n      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle">\n        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>\n      </svg>',setTimeout((function(){e.innerHTML='\n    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard">\n      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>\n    </svg>'}),1500)}null==i||i.forEach((function(e){e.addEventListener("click",(function(e){var t,n=e.target.closest(".tab-link");if(n){var o=null===(t=n.closest(".tab-links"))||void 0===t?void 0:t.querySelectorAll(".tab-link");console.log(o),o.forEach((function(e){e.classList.remove("tab-active")})),n.classList.add("tab-active");var l=n.dataset.tabfilter;n.closest(".tabs").parentElement.querySelectorAll(".tab-pan").forEach((function(e){e.classList.remove("active"),setTimeout((function(){e.classList.remove("show")}),400),e.classList.remove("show"),e.dataset.tabcontent===l&&(e.classList.add("active"),setTimeout((function(){e.classList.add("show")}),400))}))}}))}));var d=document.querySelectorAll(".copyBtn");null==d||d.forEach((function(e){e.addEventListener("click",a)}));var u=document.getElementsByClassName("accordionItem"),v=document.getElementsByClassName("accordionItemHeading");for(T=0;T<v.length;T++)v[T].addEventListener("click",m,!1);function m(){var e=this.parentNode.className;for(T=0;T<u.length;T++)u[T].className="accordionItem close";"accordionItem close"==e&&(this.parentNode.className="accordionItem open")}window.addEventListener("load",(function(){var e=new Date("October 05, 2023 15:37:25").getTime(),t=setInterval((function(){var n=(new Date).getTime(),o=e-n,l=Math.floor(o/864e5),s=Math.floor(o%864e5/36e5),c=Math.floor(o%36e5/6e4),r=Math.floor(o%6e4/1e3);document.querySelectorAll(".timer").forEach((function(e){e.querySelector(".days")&&(e.querySelector(".days").innerHTML=l),e.querySelector(".hours")&&(e.querySelector(".hours").innerHTML=s),e.querySelector(".minutes")&&(e.querySelector(".minutes").innerHTML=c),e.querySelector(".seconds")&&(e.querySelector(".seconds").innerHTML=r)})),o<0&&(clearInterval(t),document.getElementById("demo").innerHTML="EXPIRED")}),1e3)}));var h=document.querySelectorAll(".todo-list");null==h||h.forEach((function(e){e.addEventListener("click",(function(t){var n,o=t.target.closest(".edit"),l=t.target.closest(".delete");t.target.closest("[contenteditable]")||null===(n=e.querySelector("[contenteditable]"))||void 0===n||n.removeAttribute("contenteditable"),(o||l)&&(l&&l.closest(".todo-item").remove(),o&&(o.closest(".todo-item").querySelector(".edit-div").setAttribute("contenteditable",!0),o.closest(".todo-item").querySelector(".edit-div").focus()))}))})),document.querySelectorAll(".alert-del").forEach((function(e){return e.addEventListener("click",(function(){e.parentElement.classList.add("hidden")}))}));var f=document.querySelectorAll(".wishlist-box");null==f||f.forEach((function(e){e.querySelector(".delete-button").addEventListener("click",(function(){this.closest(".col-span-3").style.display="none"}))}));var y=document.querySelector(".invoice , .cart-main, .user-info"),p=null==y?void 0:y.querySelectorAll(".remove-invoice , .remove-cart, .remove-user");null==p||p.forEach((function(e){e.addEventListener("click",(function(){this.closest(".invoice-item , .cart-item, .user-item").style.display="none"}))}));var g=document.querySelectorAll(".follow-friend");null==g||g.forEach((function(e){var t=e.querySelector(".follow-btn");t.addEventListener("click",(function(){t.innerHTML='<btn style="background-color: #44588f; color:white; padding:4px; border-radius:4px">Following<btn>',t.style.padding="0px"}))}));var L=document.querySelectorAll(".add-friend");null==L||L.forEach((function(e){var t=e.querySelector(".add-btn");t.addEventListener("click",(function(){t.innerHTML='<btn style="background-color: #FF6150; color:white; padding:4px; border-radius:4px">Added<btn>',t.style.padding="0px"}))}));var b=document.querySelectorAll(".suggest-friend");null==b||b.forEach((function(e){var t=e.querySelector(".suggest-btn");t.addEventListener("click",(function(){t.innerHTML='<svg class="w-6 h-6 stroke-white bg-primary p-1">\n                                <use href="../../assets/svg/sprite.svg#Profile"></use> \n                              </svg>',t.style.padding="0px"}))}));document.querySelector(".post-media");var q=document.querySelectorAll(".post-like"),S=document.querySelectorAll(".wish-like"),w=document.querySelectorAll(".post-dislike");null==q||q.forEach((function(e){e.addEventListener("click",(function(){var e,t;null===(e=this.closest(".post-media"))||void 0===e||e.classList.add("post-liked"),null===(t=this.closest(".post-media"))||void 0===t||t.classList.remove("post-disliked")}))})),null==w||w.forEach((function(e){e.addEventListener("click",(function(){var e,t;null===(e=this.closest(".post-media"))||void 0===e||e.classList.add("post-disliked"),null===(t=this.closest(".post-media"))||void 0===t||t.classList.remove("post-liked")}))})),null==S||S.forEach((function(e){e.addEventListener("click",(function(){var e;null===(e=this.closest(".post-media"))||void 0===e||e.classList.toggle("wish-liked")}))}));var E=document.querySelector(".accept-call-end"),k=document.querySelector(".accept-call-start"),A=document.getElementsByClassName("call-start-btn"),N=document.querySelector(".call-start-show"),x=document.querySelector(".call-end"),M=document.querySelector(".call-start-end");null==x||x.addEventListener("click",(function(){var e,t;null===(e=this.closest(".accept-call-end"))||void 0===e||e.classList.add("hide"),null===(t=this.closest(".accept-call-end"))||void 0===t||t.classList.remove("show"),null==k||k.classList.remove("show"),null==N||N.classList.remove("show")})),null==N||N.addEventListener("click",(function(){null==k||k.classList.remove("show"),E.classList.add("show")}));for(var T=0;T<A.length;T++){var H;null===(H=A[T])||void 0===H||H.addEventListener("click",(function(e){E.classList.remove("hide"),k.classList.add("show")}))}null==M||M.addEventListener("click",(function(){null==k||k.classList.remove("show")}));var I=document.querySelector(".blog-toggle"),B=document.querySelector(".blog-sidebar"),C=document.querySelector(".blog-close-sidebar");null==I||I.addEventListener("click",(function(){B.classList.toggle("show")})),null==C||C.addEventListener("click",(function(){B.classList.remove("show")}))})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
+/*!********************************!*\
+  !*** ./resources/js/script.js ***!
+  \********************************/
+/*! -----------------------------------------------------------------------------------
+
+    Template Name: Govo Admin
+    Template URI: http://admin.pixelstrap.com/govo/theme
+    Description: This is Admin theme
+    Author: Pixelstrap
+    Author URI: https://themeforest.net/user/pixelstrap
+
+-----------------------------------------------------------------------------------
+
+        01. Hex Code Convert To Rgba Number Js
+        02. Search Js
+        03. Language Select Js
+        04. Header Drop Down Toggle
+        05. Plus Minus Item Js 
+        06. Cart Item Remove js
+        07. Tabs Js
+        08. Copy Js
+        09. Collapse Js
+        10. Countdown Js
+        11. Todo List Edit Delete Js 
+        12. Password Show hide js
+        13. Close alert js 
+        14. Wishlist Remove js
+        15. List-item Remove js
+        16. Following js
+        17. Add Friends js
+        18. suggestion js
+        19. Fill svg js
+        20. Accept voice call js
+        21. Blog sidebar js
+
+ --------------------------------------------------------------------------------- */
+
+/*========================
+  1. Hex Code Convert To Rgba Number Js
+ ==============================*/
+
+
+
+window.addEventListener('load', function () {
+  var bgImg = document.querySelectorAll('.bg-img');
+  for (i = 0; i < bgImg.length; i++) {
+    var bgImgEl = bgImg[i];
+    /// Optional Class Add ///
+    if (bgImgEl.classList.contains('bg-top')) {
+      bgImgEl.parentNode.classList.add('b-top');
+    } else if (bgImgEl.classList.contains('bg-bottom')) {
+      bgImgEl.parentNode.classList.add('b-buttom');
+    } else if (bgImgEl.classList.contains('bg-center')) {
+      bgImgEl.parentNode.classList.add('b-center');
+    } else if (bgImgEl.classList.contains('bg-left')) {
+      bgImgEl.parentNode.classList.add('b-left');
+    } else if (bgImgEl.classList.contains('bg-right')) {
+      bgImgEl.parentNode.classList.add('b-right');
+    }
+
+    /// Lazyloader Class Add ///
+    if (bgImgEl.classList.contains('blur-up')) {
+      bgImgEl.parentNode.classList.add('blur-up', 'lazyload');
+    }
+
+    /// Size Class Add ///
+    if (bgImgEl.classList.contains('bg_size_content')) {
+      bgImgEl.parentNode.classList.add('b_size_content');
+    }
+
+    /// Ratio Style ///
+    bgImgEl.parentNode.classList.add('bg-size');
+    var bgSrc = bgImgEl.src;
+    bgImgEl.style.display = 'none';
+  }
+});
+
+/*========================
+  2. Search Js
+ ==============================*/
+
+var searchShow = document.querySelector('.search-show');
+var searchClose = document.querySelector('.search-close');
+var searchBoxWrapper = document.querySelector('.search-box-wrapper');
+searchShow === null || searchShow === void 0 || searchShow.addEventListener('click', function () {
+  searchBoxWrapper.classList.remove('lg:scale-0', 'lg:opacity-0', 'lg:invisible');
+});
+searchClose === null || searchClose === void 0 || searchClose.addEventListener('click', function () {
+  searchBoxWrapper.classList.add('lg:scale-0', 'lg:opacity-0', 'lg:invisible');
+});
+
+/*========================
+  3. Language Select Js
+ ==============================*/
+
+var languageSelect = document.querySelector('.language-select');
+var languageSelectBtn = document.getElementById('language-select');
+var languageList = document.querySelector('.language-menu');
+languageList === null || languageList === void 0 || languageList.addEventListener('click', function (e) {
+  var language = e.target.closest('.language-option');
+  if (!language) return;
+  var languageValue = language.dataset.value;
+  var flagImage = language.querySelector('img').src;
+  languageSelectBtn.querySelector('img').src = flagImage;
+  languageSelectBtn.querySelector('span').textContent = languageValue;
+});
+
+/*=====================
+  4. Header Drop Down Toggle
+==========================*/
+var headerDropdownMenu = document.querySelectorAll('.dropdown');
+document.body.addEventListener('click', function (event) {
+  var _dropdownEl$closest;
+  var dropdownEl = event.target.closest('.dropdown');
+  var visible = dropdownEl === null || dropdownEl === void 0 || (_dropdownEl$closest = dropdownEl.closest('.dropdown')) === null || _dropdownEl$closest === void 0 ? void 0 : _dropdownEl$closest.classList.contains('show');
+  var dropdownMenuElement = event.target.closest('.dropdown-menu');
+  headerDropdownMenu.forEach(function (item) {
+    if (!dropdownMenuElement) {
+      item.classList.remove('show');
+    }
+  });
+  if (!dropdownEl) return;
+  if (!visible && !dropdownEl.classList.contains('on-hover-show')) dropdownEl === null || dropdownEl === void 0 || dropdownEl.classList.add('show');
+});
+
+/*=====================
+  5. Plus Minus Item Js 
+==========================*/
+var plusMinus = document.querySelectorAll('.plus-minus ');
+plusMinus.forEach(function (element) {
+  var addButton = element.querySelector('.add');
+  var subButton = element.querySelector('.sub');
+  addButton === null || addButton === void 0 || addButton.addEventListener('click', function () {
+    var inputEl = this.parentNode.querySelector("input[type='number']");
+    if (inputEl.value < 20) {
+      inputEl.value = Number(inputEl.value) + 1;
+    }
+  });
+  subButton === null || subButton === void 0 || subButton.addEventListener('click', function () {
+    var inputEl = this.parentNode.querySelector("input[type='number']");
+    if (inputEl.value >= 2) {
+      inputEl.value = Number(inputEl.value) - 1;
+    }
+  });
+});
+
+/*=====================
+  6. Cart Item Remove js
+==========================*/
+var cartBagProduct = document.querySelector('.shopping-bag');
+var cartRemoveBtn = cartBagProduct === null || cartBagProduct === void 0 ? void 0 : cartBagProduct.querySelectorAll('.remove-cart');
+cartRemoveBtn === null || cartRemoveBtn === void 0 || cartRemoveBtn.forEach(function (el) {
+  el.addEventListener('click', function () {
+    this.closest('.cart-item').style.display = 'none';
+  });
+});
+
+/*=====================
+  7. Tabs Js
+==========================*/
+var tabs = document.querySelectorAll('.tabs');
+tabs === null || tabs === void 0 || tabs.forEach(function (tab) {
+  tab.addEventListener('click', function (event) {
+    var _navLink$closest;
+    var navLink = event.target.closest('.tab-link');
+    if (!navLink) return;
+    var allNavLinks = (_navLink$closest = navLink.closest('.tab-links')) === null || _navLink$closest === void 0 ? void 0 : _navLink$closest.querySelectorAll('.tab-link');
+    console.log(allNavLinks);
+    allNavLinks.forEach(function (navLink) {
+      navLink.classList.remove('tab-active');
+    });
+    navLink.classList.add('tab-active');
+    var currentTabContent = navLink.dataset.tabfilter;
+    var tabContents = navLink.closest('.tabs').parentElement.querySelectorAll('.tab-pan');
+    tabContents.forEach(function (tabContent) {
+      tabContent.classList.remove('active');
+      setTimeout(function () {
+        tabContent.classList.remove('show');
+      }, 400);
+      tabContent.classList.remove('show');
+      if (tabContent.dataset.tabcontent === currentTabContent) {
+        tabContent.classList.add('active');
+        setTimeout(function () {
+          tabContent.classList.add('show');
+        }, 400);
+      }
+    });
+  });
+});
+
+/*=====================
+  8. Copy Js
+==========================*/
+
+// Copy Function
+function copyFunction() {
+  var _this = this;
+  var BtnParentEl = this.closest('.copyParent').querySelector('pre').textContent;
+  navigator.clipboard.writeText(BtnParentEl);
+  this.innerHTML = " \n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-check-circle\">\n        <path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"></path><polyline points=\"22 4 12 14.01 9 11.01\"></polyline>\n      </svg>";
+  setTimeout(function () {
+    _this.innerHTML = "\n    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-clipboard\">\n      <path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\"></rect>\n    </svg>";
+  }, 1500);
+}
+var copyBtn = document.querySelectorAll('.copyBtn');
+copyBtn === null || copyBtn === void 0 || copyBtn.forEach(function (copyBtn) {
+  copyBtn.addEventListener('click', copyFunction);
+});
+
+/*=====================
+  9. Collapse Js
+==========================*/
+
+var accItem = document.getElementsByClassName('accordionItem');
+var accHD = document.getElementsByClassName('accordionItemHeading');
+for (i = 0; i < accHD.length; i++) {
+  accHD[i].addEventListener('click', toggleItem, false);
+}
+function toggleItem() {
+  var itemClass = this.parentNode.className;
+  for (i = 0; i < accItem.length; i++) {
+    accItem[i].className = 'accordionItem close';
+  }
+  if (itemClass == 'accordionItem close') {
+    this.parentNode.className = 'accordionItem open';
+  }
+}
+
+/*=====================
+  10. Countdown Js
+==========================*/
+
+window.addEventListener('load', function () {
+  var countDownDate = new Date('October 05, 2023 15:37:25').getTime();
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+    var seconds = Math.floor(distance % (1000 * 60) / 1000);
+
+    // Output the result in an element with id="timer"
+    var timerEl = document.querySelectorAll('.timer');
+    timerEl.forEach(function (el) {
+      if (el.querySelector('.days')) {
+        el.querySelector('.days').innerHTML = days;
+      }
+      if (el.querySelector('.hours')) {
+        el.querySelector('.hours').innerHTML = hours;
+      }
+      if (el.querySelector('.minutes')) {
+        el.querySelector('.minutes').innerHTML = minutes;
+      }
+      if (el.querySelector('.seconds')) {
+        el.querySelector('.seconds').innerHTML = seconds;
+      }
+    });
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById('demo').innerHTML = 'EXPIRED';
+    }
+  }, 1000);
+});
+
+/*=====================
+  11. Todo List Edit Delete Js 
+  ==========================*/
+var todoList = document.querySelectorAll('.todo-list');
+todoList === null || todoList === void 0 || todoList.forEach(function (el) {
+  var removeAttrFn = function removeAttrFn() {
+    var _el$querySelector;
+    (_el$querySelector = el.querySelector('[contenteditable]')) === null || _el$querySelector === void 0 || _el$querySelector.removeAttribute('contenteditable');
+  };
+  el.addEventListener('click', function (event) {
+    var edit = event.target.closest('.edit');
+    var remove = event.target.closest('.delete');
+    var editRemove = event.target.closest('[contenteditable]');
+    if (!editRemove) {
+      removeAttrFn();
+    }
+    if (!edit && !remove) return;
+    if (remove) {
+      remove.closest('.todo-item').remove();
+    }
+    if (edit) {
+      edit.closest('.todo-item').querySelector('.edit-div').setAttribute('contenteditable', true);
+      edit.closest('.todo-item').querySelector('.edit-div').focus();
+    }
+  });
+});
+
+/*=====================
+ 13. Close alert js
+==========================*/
+
+var alert_del = document.querySelectorAll('.alert-del');
+alert_del.forEach(function (x) {
+  return x.addEventListener('click', function () {
+    x.parentElement.classList.add('hidden');
+  });
+});
+
+/*=====================
+ 14. Wishlist Remove js
+==========================*/
+var wishlistProduct = document.querySelectorAll('.wishlist-box');
+wishlistProduct === null || wishlistProduct === void 0 || wishlistProduct.forEach(function (el) {
+  var deleteButton = el.querySelector('.delete-button');
+  deleteButton.addEventListener('click', function () {
+    this.closest('.col-span-3').style.display = 'none';
+  });
+});
+
+/*=====================
+  15. List-item Remove js
+==========================*/
+var invoiceBox = document.querySelector('.invoice , .cart-main, .user-info');
+var invoiceRemove = invoiceBox === null || invoiceBox === void 0 ? void 0 : invoiceBox.querySelectorAll('.remove-invoice , .remove-cart, .remove-user');
+invoiceRemove === null || invoiceRemove === void 0 || invoiceRemove.forEach(function (el) {
+  el.addEventListener('click', function () {
+    this.closest('.invoice-item , .cart-item, .user-item').style.display = 'none';
+  });
+});
+
+/*=====================
+ 16. Following js
+==========================*/
+
+var followFriend = document.querySelectorAll('.follow-friend');
+followFriend === null || followFriend === void 0 || followFriend.forEach(function (el) {
+  var followButton = el.querySelector('.follow-btn');
+  followButton.addEventListener('click', function () {
+    followButton.innerHTML = "<btn style=\"background-color: #44588f; color:white; padding:4px; border-radius:4px\">Following<btn>";
+    followButton.style.padding = "0px";
+  });
+});
+
+/*=====================
+ 17. Add Friends js
+==========================*/
+
+var addFriend = document.querySelectorAll('.add-friend');
+addFriend === null || addFriend === void 0 || addFriend.forEach(function (el) {
+  var addButton = el.querySelector('.add-btn');
+  addButton.addEventListener('click', function () {
+    addButton.innerHTML = "<btn style=\"background-color: #FF6150; color:white; padding:4px; border-radius:4px\">Added<btn>";
+    addButton.style.padding = "0px";
+  });
+});
+
+/*=====================
+ 18. suggestion js
+==========================*/
+
+var suggest = document.querySelectorAll('.suggest-friend');
+suggest === null || suggest === void 0 || suggest.forEach(function (el) {
+  var suggestButton = el.querySelector('.suggest-btn');
+  suggestButton.addEventListener('click', function () {
+    suggestButton.innerHTML = "<svg class=\"w-6 h-6 stroke-white bg-primary p-1\">\n                                <use href=\"../../assets/svg/sprite.svg#Profile\"></use> \n                              </svg>";
+    suggestButton.style.padding = "0px";
+  });
+});
+
+/*=====================
+ 19. Fill svg js
+==========================*/
+
+var postMedia = document.querySelector('.post-media');
+var postLike = document.querySelectorAll('.post-like');
+var wishLike = document.querySelectorAll('.wish-like');
+var postDisLike = document.querySelectorAll('.post-dislike');
+postLike === null || postLike === void 0 || postLike.forEach(function (el) {
+  el.addEventListener('click', function () {
+    var _this$closest, _this$closest2;
+    (_this$closest = this.closest('.post-media')) === null || _this$closest === void 0 || _this$closest.classList.add('post-liked');
+    (_this$closest2 = this.closest('.post-media')) === null || _this$closest2 === void 0 || _this$closest2.classList.remove('post-disliked');
+  });
+});
+postDisLike === null || postDisLike === void 0 || postDisLike.forEach(function (el) {
+  el.addEventListener('click', function () {
+    var _this$closest3, _this$closest4;
+    (_this$closest3 = this.closest('.post-media')) === null || _this$closest3 === void 0 || _this$closest3.classList.add('post-disliked');
+    (_this$closest4 = this.closest('.post-media')) === null || _this$closest4 === void 0 || _this$closest4.classList.remove('post-liked');
+  });
+});
+wishLike === null || wishLike === void 0 || wishLike.forEach(function (el) {
+  el.addEventListener('click', function () {
+    var _this$closest5;
+    (_this$closest5 = this.closest('.post-media')) === null || _this$closest5 === void 0 || _this$closest5.classList.toggle('wish-liked');
+  });
+});
+
+/*=====================
+ 20. Accept voice call js
+==========================*/
+
+var acceptCallEnd = document.querySelector('.accept-call-end');
+var acceptCallStart = document.querySelector('.accept-call-start');
+var CallStartBtn = document.getElementsByClassName('call-start-btn');
+var CallStartShow = document.querySelector('.call-start-show');
+var CallEnd = document.querySelector('.call-end');
+var CallStartEnd = document.querySelector('.call-start-end');
+CallEnd === null || CallEnd === void 0 || CallEnd.addEventListener('click', function () {
+  var _this$closest6, _this$closest7;
+  (_this$closest6 = this.closest('.accept-call-end')) === null || _this$closest6 === void 0 || _this$closest6.classList.add('hide');
+  (_this$closest7 = this.closest('.accept-call-end')) === null || _this$closest7 === void 0 || _this$closest7.classList.remove('show');
+  acceptCallStart === null || acceptCallStart === void 0 || acceptCallStart.classList.remove('show');
+  CallStartShow === null || CallStartShow === void 0 || CallStartShow.classList.remove('show');
+});
+CallStartShow === null || CallStartShow === void 0 || CallStartShow.addEventListener('click', function () {
+  acceptCallStart === null || acceptCallStart === void 0 || acceptCallStart.classList.remove('show');
+  acceptCallEnd.classList.add('show');
+});
+for (var i = 0; i < CallStartBtn.length; i++) {
+  var _CallStartBtn$i;
+  (_CallStartBtn$i = CallStartBtn[i]) === null || _CallStartBtn$i === void 0 || _CallStartBtn$i.addEventListener('click', function (e) {
+    acceptCallEnd.classList.remove('hide');
+    acceptCallStart.classList.add('show');
+  });
+}
+CallStartEnd === null || CallStartEnd === void 0 || CallStartEnd.addEventListener('click', function () {
+  acceptCallStart === null || acceptCallStart === void 0 || acceptCallStart.classList.remove('show');
+});
+
+/*=====================
+ 21. Blog sidebar js
+==========================*/
+
+var blogSidebarToggle = document.querySelector('.blog-toggle');
+var blogSidebar = document.querySelector('.blog-sidebar');
+var blogCloseBtn = document.querySelector('.blog-close-sidebar');
+blogSidebarToggle === null || blogSidebarToggle === void 0 || blogSidebarToggle.addEventListener('click', function () {
+  blogSidebar.classList.toggle('show');
+});
+blogCloseBtn === null || blogCloseBtn === void 0 ? void 0 : blogCloseBtn.addEventListener('click', function () {
+  blogSidebar.classList.remove('show');
+});
+/******/ })()
+;
