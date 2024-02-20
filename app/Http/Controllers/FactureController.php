@@ -89,17 +89,14 @@ class FactureController extends Controller
 
         public function download_facture(Request $request)
             {
-             //dd($request->billLibelle);
+            
              $id = $request->id;
 
                $facture = Facture::where('id', $id)->with('item_factures')->first();
                $item_factures = ItemFacture::where('facture_id',$facture->id)->with('acte','code')->get();
                $client_id = $facture->client_id;
                $client = Client::find($client_id);
-            //    $user = Auth::user();
-            //    $company = Company::where('id', $user->company_id)->first();
-                //    dd($item_factures);
-
+           
               $pdf = PDF::loadView('factures.download', compact(['facture','client','item_factures']));
 
               $filename = 'facture.pdf';

@@ -34,8 +34,6 @@ const saveActe = async () => {
                 console.log('errorr',response.data.message)
               }
       
-      
-   
   })
 
 }
